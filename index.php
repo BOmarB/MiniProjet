@@ -9,9 +9,17 @@
 </head>
 
 <body>
-  <nav class="container navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">TodoList</a>
+  <nav class="container navbar navbar-expand-md navbar-dark bg-dark">
+    <a href="#" class="ms-3 navbar-brand">TodoList</a>
   </nav>
+  <div class="container mt-4">
+    <form class="form-inline" action="index.php" method="post">
+      <div class="form-group">
+        <input class="form-control mr-2" type="text" placeholder="Title">
+      </div>
+      <input class="btn btn-primary mt-2" type="button" value="Add">
+    </form>
+  </div>
 </body>
 
 </html>
