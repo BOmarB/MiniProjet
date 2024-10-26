@@ -15,10 +15,24 @@
   <div class="container mt-4">
     <form class="form-inline" action="index.php" method="post">
       <div class="form-group">
-        <input class="form-control mr-2" type="text" placeholder="Title">
+        <input class="form-control mr-2" type="text" placeholder="Title" required>
       </div>
       <input class="btn btn-primary mt-2" type="button" value="Add">
     </form>
+  </div>
+  <div class="container mt-4">
+    <ul class="list-group">
+      <?php
+      if (!empty($taches)) {
+        foreach ($taches as $tache) {
+          $class = $tache['done'] ? 'list-group-item-success' : 'list-group-item-warning';
+          echo "<li class='list-group-item $class'>" . $tache['title'] . "</li>";
+        }
+      } else {
+        echo "<li class='list-group-item'>Aucune tâche trouvée.</li>";
+      }
+      ?>
+    </ul>
   </div>
 </body>
 
